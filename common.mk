@@ -238,13 +238,8 @@ CITRUS_VERSION_CODENAME := 5.0
 PLATFORM_VERSION_FLAVOUR := Pie
 
 ifndef CITRUS_BUILD_TYPE
-ifeq ($(CITRUS_RELEASE),true)
-    CITRUS_BUILD_TYPE := RELEASE
-    CITRUS_POSTFIX := -$(shell date +"%Y%m%d")
-else
-    CITRUS_BUILD_TYPE := COMMUNITY
+    CITRUS_BUILD_TYPE := MOD
     CITRUS_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
-endif
 endif
 
 ifdef CITRUS_BUILD_EXTRA
